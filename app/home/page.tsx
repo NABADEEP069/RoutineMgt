@@ -14,6 +14,7 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="space-y-4">
+                        <div className="text-left text-lg font-bold mb-2">Select Branch:</div>
                         <div className="grid grid-cols-2 gap-4">
                             <button className="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-700 transition w-full" onClick={() => window.location.href = '/dept'}>CSE</button>
                             <button className="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-700 transition w-full" onClick={() => window.location.href = '/dept'}>CE</button>
