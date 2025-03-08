@@ -7,8 +7,20 @@ export default function SelectSemester() {
         window.location.href = `./${semester}`;
     };
 
+    const handleBackClick = () => {
+        // Navigate to the home page
+        window.location.href = './home';
+    };
+
     return (
-        <div className="h-screen flex justify-center items-center">
+        <div className="h-screen flex bg-gray-100 flex-col justify-center items-center relative">
+            <button
+                type="button"
+                onClick={handleBackClick}
+                className="absolute top-4 left-4 text-black bg-white-500 border focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5"
+            >
+                Back
+            </button>
             <div className="flex justify-center space-x-10">
                 <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
                     <div className="px-10">
