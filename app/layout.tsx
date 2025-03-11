@@ -22,15 +22,17 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname(); // Get the current route
 
+  // Hide Navbar on `/signup` and `/` (main page)
+  const showNavbar = pathname !== "/signup" && pathname !== "/";
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-gray-100 antialiased`}
       >
-        {/* Show Navbar only if the current path is NOT '/signup' */}
-        {pathname !== "/signup" && <Navbar />}
+        {showNavbar && <Navbar />}
         
-        <div className={`${pathname !== "/signup" ? "pt-16" : ""}`}>
+        <div className={`${showNavbar ? "pt-16" : ""}`}>
           {children}
         </div>
       </body>
